@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        /* 1 */
+        #one-color-to-another{
+            height: 100px;
+            width: 60%;
+            margin: 5% auto;
+            border-radius: 4px;
+            font-family: Poppins, Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 100px;
+            font-weight: normal;
+            color: #f4f6ff;
+            background-color: #e84a5f;
+
+            animation-name: color-change;
+            animation-duration: 8.5s;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes color-change{
+            /* ////////---------  Applying from to here (from = 0%, to = 100%) --------------////////////
+            from {background-color: #99b898;}
+            to {background-color: #e84a5f;} */
+
+            /* Using percentage */
+            0% { background-color: #e84a5f;}
+            25% { background-color: #99b898; }
+            50% { background-color: #fbd46d;}
+            75% { background-color:#383e56;}
+            100% { background-color: #726a95;}
+
+
+        }
+
+
+        /* 2 */
+        #position-change{
+            height: 100px;
+            width: 30%;
+            margin: 5% auto;
+            border-radius: 4px;
+            font-family: Poppins, Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 100px;
+            font-weight: normal;
+            color: #f4f6ff;
+            background-color: #e84a5f;
+            position: relative;
+
+            animation-name: position-change;
+            animation-duration: 8.5s;
+            animation-delay: 11.5s;
+        }
+
+        @keyframes position-change{
+            0% { background-color: #e84a5f; left:-15%; top:0px; }
+            25% { background-color: #99b898; left:0px; top:0px; }
+            50% { background-color: #fbd46d; left: 15%; top:200px; }
+            75% { background-color:#383e56; left:-15%; top:200px; }
+            100% { background-color: #726a95; left:0px; top:0px; }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="one-color-to-another"> relode to see the color change</h1>
+        <h1 id="position-change"> catch me if you can!</h1>
+    </div>
+</body>
+</html>
